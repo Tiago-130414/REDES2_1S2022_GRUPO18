@@ -2,3 +2,185 @@
 ///// CONFIGURACIONES 
 /////////////////////////////////////////////////////
 
+//////////////////////////////////TOPOLOGIA VODAFONE
+
+//////////////////////////////////TOPOLOGIA TELEFONICA
+
+#########################SW4
+
+Switch(config)# hostname SW4
+
+##### CREANDO VLAN
+SW4(config)#vlan 40
+SW4(config-vlan)# name CulturaYDeportes
+
+##### MODO ACCESO
+SW4(config)# interface FastEthernet0/1
+SW4(config-if)# switchport access vlan 40
+SW4(config-if)# switchport mode access
+
+SW4(config)# interface FastEthernet0/2
+SW4(config-if)# switchport access vlan 40
+SW4(config-if)# switchport mode access
+
+SW4(config)# interface FastEthernet0/3
+SW4(config-if)# switchport access vlan 40
+SW4(config-if)# switchport mode access
+
+##### MODO TRUNK
+SW4(config)# interface GigabitEthernet0/1
+SW4(config-if)# switchport mode trunk
+
+#########################SW5
+
+Switch(config)# hostname SW5
+
+##### CREANDO VLAN
+SW5(config)#vlan 50
+SW5(config-vlan)# name DesarrolloEmpresarial
+
+##### MODO ACCESO
+SW5(config)# interface FastEthernet0/1
+SW5(config-if)# switchport access vlan 50
+SW5(config-if)# switchport mode access
+
+SW5(config)# interface FastEthernet0/2
+SW5(config-if)# switchport access vlan 50
+SW5(config-if)# switchport mode access
+
+SW5(config)# interface FastEthernet0/3
+SW5(config-if)# switchport access vlan 50
+SW5(config-if)# switchport mode access
+
+##### MODO TRUNK
+SW5(config)# interface GigabitEthernet0/1
+SW5(config-if)# switchport mode trunk
+
+#########################R5
+
+Router(config)# hostname R5
+
+##### CONFIGURANDO IP's
+R5(config)# interface Serial0/2/0
+R5(config-if)# ip address 2.2.2.2 255.255.255.252
+
+R5(config)# interface Serial0/3/0
+R5(config-if)# ip address 192.168.98.154 255.255.255.248
+
+R5(config)# interface Serial0/3/1
+R5(config-if)# ip address 192.168.98.162 255.255.255.248
+
+##### CONFIGURANDO EIGRP
+R5(config)# router eigrp 10
+R5(config-router)# redistribute rip metric 10000 0 255 1 1500 
+R5(config-router)# redistribute bgp 200 metric 1 1 1 1 1 
+R5(config-router)# network 192.168.98.160 0.0.0.7
+
+##### CONFIGURANDO BGP
+R5(config)# router bgp 200
+R5(config-router)# bgp log-neighbor-changes
+R5(config-router)# neighbor 2.2.2.1 remote-as 100
+R5(config-router)# network 2.2.2.0 mask 255.255.255.252
+R5(config-router)# redistribute eigrp 10 
+
+##### CONFIGURANDO RIP
+R5(config)# router rip
+R5(config-router)# version 2
+R5(config-router)# redistribute eigrp 10 metric 1 
+R5(config-router)# network 192.168.98.0
+
+#########################R6
+
+Router(config)# hostname R6
+
+##### CONFIGURANDO IP's
+R6(config)# interface Serial0/2/0
+R6(config-router)# ip address 192.168.98.145 255.255.255.248
+
+R6(config)# interface Serial0/3/0
+R6(config-router)# ip address 192.168.98.130 255.255.255.248
+
+R6(config)# interface Serial0/3/1
+R6(config-router)# ip address 192.168.98.153 255.255.255.248
+
+##### CONFIGURANDO EIGRP
+R6(config)# router eigrp 10
+R6(config-router)# redistribute rip metric 10000 0 255 1 1500 
+R6(config-router)# redistribute bgp 200 metric 1 1 1 1 1 
+R6(config-router)# network 192.168.98.144 0.0.0.7
+
+##### CONFIGURANDO RIP
+R6(config)# router rip
+R6(config-router)# version 2
+R6(config-router)# redistribute eigrp 10 metric 1 
+R6(config-router)# network 192.168.98.0
+R6(config-router)# no auto-summary
+
+#########################R7
+
+Router(config)# hostname R7
+
+##### CONFIGURANDO IP's
+R7(config)# interface Serial0/2/0
+R7(config-router)# ip address 192.168.98.146 255.255.255.248
+
+R7(config)# interface Serial0/3/0
+R7(config-router)# ip address 192.168.98.138 255.255.255.248
+
+R7(config)# interface Serial0/3/1
+R7(config-router)# ip address 192.168.98.161 255.255.255.248
+
+##### CONFIGURANDO EIGRP
+R7(config)# router eigrp 10
+R7(config-router)# redistribute rip metric 10000 0 255 1 1500 
+R7(config-router)# redistribute bgp 200 metric 1 1 1 1 1 
+R7(config-router)# network 192.168.98.136 0.0.0.7
+R7(config-router)# network 192.168.98.144 0.0.0.7
+R7(config-router)# network 192.168.98.160 0.0.0.7
+
+##### CONFIGURANDO RIP
+R7(config)# router rip
+R7(config-router)# version 2
+R7(config-router)# redistribute eigrp 10 metric 1 
+R7(config-router)# network 192.168.98.0
+R7(config-router)# no auto-summary
+
+#########################R8
+
+Router(config)# hostname R8
+
+##### CONFIGURANDO IP's
+
+R8(config)# interface GigabitEthernet0/1.40
+R8(config-router)# encapsulation dot1Q 40
+R8(config-router)# ip address 192.168.98.1 255.255.255.192
+
+R8(config)# interface Serial0/3/0
+R8(config-router)# ip address 192.168.98.129 255.255.255.248
+
+##### CONFIGURANDO RIP
+R8(config)# router rip
+R8(config-router)# version 2
+R8(config-router)# network 192.168.98.0
+R8(config-router)# no auto-summary
+
+#########################R9
+
+Router(config)# hostname R9
+
+##### CONFIGURANDO IP's
+
+R9(config)# interface GigabitEthernet0/1.50
+R9(config-router)# encapsulation dot1Q 50
+R9(config-router)# ip address 192.168.98.65 255.255.255.192
+R9(config-router)# ip access-group 40 out
+
+R9(config)# interface Serial0/3/0
+R9(config-router)# ip address 192.168.98.137 255.255.255.248
+
+##### CONFIGURANDO EIGRP
+R9(config)# router eigrp 10
+R9(config-router)# network 192.168.98.64 0.0.0.63
+R9(config-router)# network 192.168.98.136 0.0.0.7
+
+
