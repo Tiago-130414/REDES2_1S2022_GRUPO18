@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  background-color: #15181f;
+  color: #666;
+}
+
+.row{
+    margin-top: 8vh;
+}
+
+.encabezadoPrincipal{
+    background-image: url('../../../assets/cityWalpaper.png');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    background-color: #15181f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezadoPrincipal h2{
+    color: #222;
+    font-size: 5vw;
+    font-weight: 500;
+    letter-spacing:  5px;
+    cursor: pointer;
+}
+
+.encabezadoPrincipal h2 span{
+    transition: 0.5s;
+}
+
+.encabezadoPrincipal h2:hover span:nth-child(1){
+    margin-right: 2vw;
+}
+
+.encabezadoPrincipal h2:hover span:nth-child(1) {
+    color: #D81616;
+    text-shadow:  0 0 10px #D81616,
+                  0 0 20px #D81616,
+                  0 0 40px #D81616,
+                  0 0 80px #D81616,
+                  0 0 120px #D81616,
+                  0 0 160px #D81616;
+}
+
+.encabezadoPrincipal h2:hover span:nth-child(2) {
+    color: #fff;
+    text-shadow:  0 0 10px #fff,
+                  0 0 40px #fff,
+                  0 0 80px #fff,
+                  0 0 120px #fff,
+                  0 0 160px #fff;
+}
