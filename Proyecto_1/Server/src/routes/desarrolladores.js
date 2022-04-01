@@ -4,7 +4,7 @@ const Item = require('../../database/usuario')
 
 router.get('/developers',async (req,res)=>{
     let desarrolladores = await retornarVal()
-    res.json({"desarrolladores":desarrolladores});
+    res.json({"server": process.env.SERVER,"desarrolladores":desarrolladores});
 });
 
 async function retornarVal (){

@@ -4,7 +4,7 @@ const Item = require('../../database/imagen')
 
 router.get('/home',async(req,res)=>{
     let home = await retornarVal()
-    res.json({"home" : home})
+    res.json({"server": process.env.SERVER,"home" : home})
 });
 
 async function retornarVal (){
