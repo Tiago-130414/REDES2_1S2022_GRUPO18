@@ -13,7 +13,7 @@ export class HomePageComponent implements OnInit {
   constructor(public homeService: HomeService) { }
 
   nombreServer: string = "";
-  datosAdmins: HomeInterface[] = [];
+  datosHome: HomeInterface[] = [];
 
   ngOnInit(): void {
     this.CargarDatos();
@@ -24,7 +24,9 @@ export class HomePageComponent implements OnInit {
     {
       let valores: any = res;
       this.nombreServer = valores[0];
-      this.datosAdmins = valores[1];
+      this.datosHome = valores[1];
+      console.log("LISTA DE HOME");
+      console.log(this.datosHome);
     },
     err => console.log(err));
   }

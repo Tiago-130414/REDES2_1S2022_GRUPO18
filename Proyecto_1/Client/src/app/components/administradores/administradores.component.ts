@@ -27,7 +27,7 @@ export class AdministradoresComponent implements OnInit {
       let valores: any = res;
       this.nombreServer = valores[0];
       this.datosAdmins = valores[1];
-      console.log("LISTA DE DESARROLLADORES");
+      console.log("LISTA DE ADMINISTRADORES");
       console.log(this.datosAdmins);
     },
     err => console.log(err));
