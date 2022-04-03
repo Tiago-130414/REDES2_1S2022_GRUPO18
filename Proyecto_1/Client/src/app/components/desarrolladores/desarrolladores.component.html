@@ -10,11 +10,9 @@
 </head>
 <body>
     <app-navigation></app-navigation>
-
     <div class="encabezadoPrincipal">
-            <h1>Desarrolladores</h1>
             <div class="col-sm-6 col-md-4" *ngFor="let dato of datosDesarrolladores">
-                <app-card-admin [usuario]="dato"></app-card-admin>
+                <app-card-developer [usuario]="dato"></app-card-developer>
             </div>
     </div>
     

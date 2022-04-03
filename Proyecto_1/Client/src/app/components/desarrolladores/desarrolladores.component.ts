@@ -25,8 +25,9 @@ export class DesarrolladoresComponent implements OnInit {
     {
       let valores: any = res;
       this.nombreServer = valores.serve;
-      this.datosDesarrolladores = valores.administradores;
+      this.datosDesarrolladores = valores.desarrolladores;
       console.log("LISTA DE DESARROLLADORES");
+      console.log(valores);
       console.log(this.datosDesarrolladores);
     },
     err => console.log(err));
