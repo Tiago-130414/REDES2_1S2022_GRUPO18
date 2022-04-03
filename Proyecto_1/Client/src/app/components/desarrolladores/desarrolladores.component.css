@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  background-color: #15181f;
+  color: #666;
+  min-height: 100vh;
+}
+
+.row{
+    margin-top: 8vh;
+}
+
+.encabezadoPrincipal{
+    width: 100%;
+    height: 100vh;
+    background-color: #15181f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

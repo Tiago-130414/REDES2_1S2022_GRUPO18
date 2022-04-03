@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { AdminInterface } from 'src/app/models/AdminInterface'
+import { UsuariosInterface } from 'src/app/models/UsuariosInterface'
 
 @Component({
   selector: 'app-card-admin',
@@ -14,7 +14,7 @@ export class CardAdminComponent implements OnInit {
   //Style
   styleCadena = "4eb7ff";
   //INPUT
-  @Input() usuario: AdminInterface;
+  @Input() usuario: UsuariosInterface;
 
   ngOnInit(): void {
     var randomColor = Math.floor(Math.random()*16777215).toString(16);

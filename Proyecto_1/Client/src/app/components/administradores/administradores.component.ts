@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AdminInterface } from 'src/app/models/AdminInterface'
+import { UsuariosInterface } from 'src/app/models/UsuariosInterface';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'app-administradores',
@@ -9,14 +10,27 @@ import { AdminInterface } from 'src/app/models/AdminInterface'
 })
 export class AdministradoresComponent implements OnInit {
 
-  constructor() { }
+  constructor(public usuariosService: UsuariosService) { }
 
   //DatosAdministrador
-  datosAdmins: AdminInterface[] = [];
+  nombreServer: string = "";
+  datosAdmins: UsuariosInterface[] = [];
 
   ngOnInit(): void {
-    let dato1 :AdminInterface = {Titulo: "Javier", Cuerpo: "Prueba1"};
-    this.datosAdmins.push(dato1);
+    this.CargarDatos();
+    //this.datosAdmins.push(dato1);
+  }
+
+  CargarDatos(){
+    this.usuariosService.CargarAdministradores().subscribe(async (res) =>
+    {
+      let valores: any = res;
+      this.nombreServer = valores[0];
+      this.datosAdmins = valores[1];
+      console.log("LISTA DE DESARROLLADORES");
+      console.log(this.datosAdmins);
+    },
+    err => console.log(err));
   }
 
 }

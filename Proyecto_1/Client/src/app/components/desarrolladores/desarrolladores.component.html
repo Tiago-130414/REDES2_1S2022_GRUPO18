@@ -1,1 +1,26 @@
-<p>desarrolladores works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrolladores</title>
+    <link rel="stylesheet" href="desarrolladores.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.css">
+</head>
+<body>
+    <app-navigation></app-navigation>
+
+    <div class="encabezadoPrincipal">
+            <h1>Desarrolladores</h1>
+            <div class="col-sm-6 col-md-4" *ngFor="let dato of datosDesarrolladores">
+                <app-card-admin [usuario]="dato"></app-card-admin>
+            </div>
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

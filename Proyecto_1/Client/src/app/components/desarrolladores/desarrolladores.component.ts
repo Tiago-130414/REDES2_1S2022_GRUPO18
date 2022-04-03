@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosInterface } from 'src/app/models/UsuariosInterface';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'app-desarrolladores',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesarrolladoresComponent implements OnInit {
 
-  constructor() { }
+  //DatosAdministrador
+  nombreServer: string = "";
+  datosDesarrolladores: UsuariosInterface[] = [];
+
+  constructor(public usuariosService: UsuariosService) {
+    this.CargarDatos();
+  }
 
   ngOnInit(): void {
+  }
+
+  CargarDatos(){
+    this.usuariosService.CargarDesarrolladores().subscribe(async (res) =>
+    {
+      let valores: any = res;
+      this.nombreServer = valores[0];
+      this.datosDesarrolladores = valores[1];
+      console.log("LISTA DE DESARROLLADORES");
+      console.log(this.datosDesarrolladores);
+    },
+    err => console.log(err));
   }
 
 }
