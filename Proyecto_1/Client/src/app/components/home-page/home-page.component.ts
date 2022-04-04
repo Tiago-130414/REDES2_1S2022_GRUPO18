@@ -23,8 +23,8 @@ export class HomePageComponent implements OnInit {
     this.homeService.CargarHome().subscribe(async (res) =>
     {
       let valores: any = res;
-      this.nombreServer = valores[0];
-      this.datosHome = valores[1];
+      this.nombreServer = valores.server;
+      this.datosHome = valores.home;
       console.log("LISTA DE HOME");
       console.log(this.datosHome);
     },

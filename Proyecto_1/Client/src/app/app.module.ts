@@ -12,6 +12,7 @@ import { DesarrolladoresComponent } from './components/desarrolladores/desarroll
 import { CardAdminComponent } from './components/card-admin/card-admin.component';
 import { IonicModule } from '@ionic/angular';
 import { CardDeveloperComponent } from './components/card-developer/card-developer.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CardDeveloperComponent } from './components/card-developer/card-develop
     AdministradoresComponent,
     DesarrolladoresComponent,
     CardAdminComponent,
-    CardDeveloperComponent
+    CardDeveloperComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
