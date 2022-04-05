@@ -11,6 +11,9 @@
 <body>
     <app-navigation></app-navigation>
 
+    <div class="container">
+        Sevidor: <span>{{nombreServer}}</span>
+    </div>
     <div class="encabezadoPrincipal">
             <div class="col-sm-6 col-md-4" *ngFor="let dato of datosAdmins">
                 <app-card-admin [usuario]="dato"></app-card-admin>

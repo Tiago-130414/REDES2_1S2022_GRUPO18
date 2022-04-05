@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class HomeService {
 
-  API_URI = 'http://44.201.190.238:4000';
+  API_URI = 'http://18.233.155.68:4000';
 
   constructor(private http: HttpClient) { }
 

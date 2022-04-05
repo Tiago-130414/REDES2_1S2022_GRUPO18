@@ -25,7 +25,7 @@ export class AdministradoresComponent implements OnInit {
     this.usuariosService.CargarAdministradores().subscribe(async (res) =>
     {
       let valores: any = res;
-      this.nombreServer = valores.serve;
+      this.nombreServer = valores.server;
       this.datosAdmins = valores.administradores;
       console.log("LISTA DE ADMINISTRADORES");
       console.log(this.datosAdmins);

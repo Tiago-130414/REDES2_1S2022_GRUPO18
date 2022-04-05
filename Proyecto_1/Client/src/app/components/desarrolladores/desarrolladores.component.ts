@@ -24,7 +24,7 @@ export class DesarrolladoresComponent implements OnInit {
     this.usuariosService.CargarDesarrolladores().subscribe(async (res) =>
     {
       let valores: any = res;
-      this.nombreServer = valores.serve;
+      this.nombreServer = valores.server;
       this.datosDesarrolladores = valores.desarrolladores;
       console.log("LISTA DE DESARROLLADORES");
       console.log(valores);

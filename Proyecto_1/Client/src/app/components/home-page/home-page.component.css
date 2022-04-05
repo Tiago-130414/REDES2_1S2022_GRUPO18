@@ -11,6 +11,20 @@ body{
     margin-top: 8vh;
 }
 
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.container span{
+    color: aquamarine;
+    font-size: 6rem;
+}
+
 .encabezadoPrincipal{
     background-image: url('../../../assets/cityWalpaper.png');
     background-position: center center;
