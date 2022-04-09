@@ -1,13 +1,17 @@
-FROM node:alpine
+### STAGE 1: Build ###
+FROM node:lts-alpine AS builder
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-
+COPY package.json package-lock.json ./
 RUN npm install
 
 COPY . .
+RUN npm run build
 
-EXPOSE 4200
+### STAGE 2###
+FROM nginx:alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder /usr/src/app/dist/client /usr/share/nginx/html
 
-CMD /usr/src/app/node_modules/.bin/ng serve --host 0.0.0.0 --disableHostCheck
+EXPOSE 80
