@@ -9,7 +9,7 @@ import { UsuariosInterface } from '../models/UsuariosInterface';
 })
 export class UsuariosService {
 
-  API_URI = 'http://35.174.109.45:4000';
+  API_URI = 'http://18.204.247.18:4000';
 
   constructor(private http: HttpClient) { }
 

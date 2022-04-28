@@ -1,0 +1,13 @@
+use('Proyecto1');
+db.Proyecto1.insertMany([
+    {"tipo" : "Desarrollador", "puesto" : "Coordinador", "nombre" : "Javier Oswaldo Miron Cifuentes", "carnet" : "201602694", "curso" : "Redes 2", "descripcion" : "-" },
+    {"tipo" : "Desarrollador", "puesto" : "Desarrollador2", "nombre" : "Santiago Gilberto Rivadeneira Ruano", "carnet" : "201313722", "curso" : "Redes 2", "descripcion" : "-" },
+    {"tipo" : "Desarrollador", "puesto" : "Desarrollador1", "nombre" : "Edwin Alfredo Lopez Gomez", "carnet" : "201314007", "curso" : "Redes 2", "descripcion" : "-" },
+    {"tipo" : "Administrador", "puesto" : "Presidente", "nombre" : "Javier Oswaldo Miron Cifuentes", "carnet" : "-", "curso" : "-", "descripcion" : "​Es el jefe de Estado y de Gobierno de los Estados Unidos. Es el más alto cargo político del país por influencia y reconocimiento." },
+    {"tipo" : "Administrador", "puesto" : "Vicepresidente", "nombre" : "Edwin Alfredo Lopez Gomez", "carnet" : "-", "curso" : "-", "descripcion" : "​Es la persona con el segundo puesto más alto en la rama ejecutiva del Gobierno, después del presidente de los Estados Unidos. El vicepresidente ejerce la presidencia de forma definitiva cuando el presidente muere, renuncia o es apartado de su cargo por un enjuiciamiento." },
+    {"tipo" : "Administrador", "puesto" : "Ministro de Seguridad", "nombre" : "Santiago Gilberto Rivadeneira Ruano", "carnet" : "-", "curso" : "-", "descripcion" : "​Es quien está encargado del Departamento de Seguridad Nacional de los Estados Unidos, que es el departamento del Gobierno federal de los Estados Unidos encargado de proteger el territorio estadounidense y la seguridad de sus ciudadanos." },
+    {"tipo" : "Imagen", "link" : "https://images-ext-1.discordapp.net/external/UF1BfeeNqh-c8MuM-fHnY4kIs9DjQsKGx9dqjeXTkAc/https/revistaelconocedor.com/wp-content/uploads/2019/09/01110001010-1024x683.jpg?width=1014&height=676" },
+    {"tipo" : "Imagen", "link" : "https://images-ext-1.discordapp.net/external/KBuNBkkGNgOCmc9bKERtcyORddMd_-2p1Gi4JzFDh9E/https/images.ecestaticos.com/ZP-SlyRxIiMqOofv7P_EQKaY-NA%3D/1x111%3A2120x1304/1600x900/filters%3Afill%28white%29%3Aformat%28jpg%29/f.elconfidencial.com%252Foriginal%252F1d9%252F210%252Ffdf%252F1d9210fdf66fa40e218d91c41f9a088a.jpg?width=1202&height=676" },
+    {"tipo" : "Imagen", "link" : "https://images-ext-2.discordapp.net/external/mGafVs7TnIDNZxfS3CROdQtMnTnpL7Qy_TSNOYH3HHs/https/pt-static.z-dn.net/files/d20/3512fb70d03900cf99cf9e4992950cb4.png?width=1202&height=676" },
+    {"tipo" : "Imagen", "link" : "https://images-ext-1.discordapp.net/external/KsgcRuXMk_k5pXxP2Y2dPPPyQCtKWkYFNYiLYD6wUWk/https/www.ngenespanol.com/wp-content/uploads/2018/08/Los-%25C3%25A1rboles-futuristas-de-Singapur-1280x720.jpg?width=1202&height=676" }
+]);
