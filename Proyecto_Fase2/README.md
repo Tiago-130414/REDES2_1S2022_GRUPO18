@@ -10,6 +10,17 @@
 | 3 | Javier Oswaldo Miron Cifuentes              | 201602694 |
 
 ---
+### Definición del problema
+El país de Ucron ahora cuenta con una página para darse a conocer al mundo;
+sin embargo, aún no cuentan con la seguridad para prevenir futuros ataques
+cibernéticos y el servicio no cumple con la disponibilidad adecuada para cubrir la
+demanda de peticiones realizadas.
+Por ello le solicita nuevamente que realice la configuración necesaria dentro de
+la nube para salvaguardar la información con la que cuentan dentro de su
+gobierno y restringir el acceso a la misma utilizando los servicios que proporciona
+AWS
+
+---
 ### Configuracion VPC
 <img src="Images/img1.png">
 <img src="Images/img2.png">
