@@ -74,3 +74,16 @@ Es un servicio de DNS (sistema de nombres de dominio) web escalable y de alta di
 
 <img src="Images/imagen18.png">
 <img src="Images/imagen19.png">
+
+---
+### Freenom 
+
+Es el primer proveedor de dominios exclusivamente gratuitos del mundo. Nuestra misión es facilitar que la gente pueda acceder a un lugar en internet y que los diversos países desarrollen su economía digital.
+
+Al romper barreras y integrar dominios gratuitas con las últimas tecnologías de creación y hositng de sitios web, Freenom facilita el constucción de sitios web y sus contenidos, para cualquier empresa o persona, de forma gratuita.
+
+Utilizando la última tecnología de nube AnyCast, Freenom garantiza la estabilidad y el rendimiento de todos los dominios que administra. Gracias a socios estratégicos de confianza como Twitter, Internet Identity, Kaspersky y otros más de 40 colaboradores en seguridad, somos capaces de suministrar la tecnología antiabusos más moderna, garantizando así la seguridad y fiabilidad de los dominios de todos nuestros usuarios.
+
+<img src="Images/imagen20.png">
+<img src="Images/imagen21.png">
+<img src="Images/imagen22.png">
