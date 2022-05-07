@@ -65,7 +65,12 @@ El Target Group fue implementado dentro del Load Balancer, este nos permite indi
 
 Maneja la complejidad de crear, almacenar y renovar certificados y claves SSL/TLS X.509 públicos y privados que protegen sus sitios web y aplicaciones de AWS. Puede proporcionar certificados para sus servicios integrados de AWS emitiéndolos directamente con ACM o importando certificados de terceros al sistema de administración de ACM. Los certificados ACM pueden proteger nombres de dominio únicos, varios nombres de dominio específicos, dominios comodín o combinaciones de estos.
 
+<img src="Images/imagen17.png">
+
 ---
 ### Amazon Route 53 
 
 Es un servicio de DNS (sistema de nombres de dominio) web escalable y de alta disponibilidad en la nube. Está diseñado para ofrecer a los desarrolladores y las empresas un método fiable y rentable para redirigir a los usuarios finales a las aplicaciones en Internet mediante la traducción de nombres legibles para las personas como www.ejemplo.com en direcciones IP numéricas como 192.0.2.1 que utilizan los equipos para conectarse entre ellos. Amazon Route 53 también cumple con IPv6.
+
+<img src="Images/imagen18.png">
+<img src="Images/imagen19.png">
