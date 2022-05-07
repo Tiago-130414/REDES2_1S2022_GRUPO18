@@ -11,12 +11,12 @@
 
 ---
 ### Configuracion VPC
-<img src="images/img1.png">
-<img src="images/img2.png">
-<img src="images/img3.png">
-<img src="images/img4.png">
-<img src="images/img5.png">
+<img src="Images/img1.png">
+<img src="Images/img2.png">
+<img src="Images/img3.png">
+<img src="Images/img4.png">
+<img src="Images/img5.png">
 
 ---
 ### Topologia
-<img src="images/arquitectura.png">
+<img src="Images/arquitectura.png">
