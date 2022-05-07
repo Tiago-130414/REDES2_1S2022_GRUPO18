@@ -59,3 +59,8 @@ El Target Group fue implementado dentro del Load Balancer, este nos permite indi
 <img src="Images/imagen14.png">
 <img src="Images/imagen15.png">
 <img src="Images/imagen16.png">
+
+---
+### AWS Certificate Manager (ACM)
+
+Maneja la complejidad de crear, almacenar y renovar certificados y claves SSL/TLS X.509 públicos y privados que protegen sus sitios web y aplicaciones de AWS. Puede proporcionar certificados para sus servicios integrados de AWS emitiéndolos directamente con ACM o importando certificados de terceros al sistema de administración de ACM. Los certificados ACM pueden proteger nombres de dominio únicos, varios nombres de dominio específicos, dominios comodín o combinaciones de estos.
